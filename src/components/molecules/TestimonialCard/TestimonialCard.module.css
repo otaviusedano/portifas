@@ -1,0 +1,44 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--space-7);
+  padding: var(--space-7);
+  overflow: hidden;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.quote {
+  position: relative;
+  font-size: var(--fs-lg);
+  font-style: oblique 10deg;
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+  white-space: pre-line;
+}
+
+.author {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.identity {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+}
+
+.role {
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+}

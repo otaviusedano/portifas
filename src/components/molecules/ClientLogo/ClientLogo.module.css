@@ -1,0 +1,35 @@
+.logo {
+  height: var(--space-6);
+  /* altura uniforme para todos os logos */
+  width: auto;
+  max-width: 180px;
+  /* limita wordmarks muito largos */
+  object-fit: contain;
+  /* Os logos já são claros e têm bom contraste no fundo escuro.
+     Para forçar uma silhueta branca uniforme, ative: filter: brightness(0) invert(1); */
+  opacity: 0.5;
+  transition: opacity var(--transition-base);
+  user-select: none;
+}
+
+.logo:hover {
+  opacity: 1;
+}
+
+.logoLarge {
+  height: calc(var(--space-6) * 1.4);
+  max-width: 240px;
+}
+
+.fallback {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-faint);
+  white-space: nowrap;
+  transition: color var(--transition-base);
+}
+
+.fallback:hover {
+  color: var(--color-text);
+}

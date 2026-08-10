@@ -1,0 +1,67 @@
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-hero-glow), var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.empty {
+  padding: var(--space-5);
+}
+
+.label {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text-faint);
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+
+.banner {
+  aspect-ratio: 16 / 6;
+}
+
+.wide {
+  aspect-ratio: 16 / 8;
+}
+
+.video {
+  aspect-ratio: 16 / 10;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+}
+
+.tall {
+  aspect-ratio: 4 / 5;
+}
+
+.phone {
+  aspect-ratio: 591 / 1280;
+}
+
+@media (max-width: 768px) {
+  .banner,
+  .wide,
+  .video,
+  .tall {
+    aspect-ratio: 4 / 3;
+  }
+}

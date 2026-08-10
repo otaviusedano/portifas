@@ -1,0 +1,7 @@
+services:
+  portfolio-otavio:
+    image: portfolio-otavio:latest
+    container_name: portfolio-otavio
+    restart: unless-stopped
+    ports:
+      - "8080:80"

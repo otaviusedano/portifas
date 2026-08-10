@@ -1,0 +1,50 @@
+.bars {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  gap: 2px;
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(
+    to bottom,
+    transparent,
+    #000 15%,
+    #000 85%,
+    transparent
+  );
+}
+
+.bar {
+  flex: 1;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(53, 214, 164, 0.05) 30%,
+    rgba(53, 214, 164, 0.45) 60%,
+    rgba(31, 182, 201, 0.15) 100%
+  );
+  opacity: 0.25;
+  transform-origin: bottom;
+  animation-name: shimmer;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.12;
+    transform: scaleY(0.7);
+  }
+  100% {
+    opacity: 0.55;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bar {
+    animation: none;
+    opacity: 0.28;
+  }
+}

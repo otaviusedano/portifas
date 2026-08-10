@@ -1,0 +1,530 @@
+/*
+ * Mirrors CaseFpassPage.module.css so both case studies read as one family.
+ * The additions here are the pieces this story needs and Fpass doesn't:
+ * the STAR labels, the stat row, the token cards and the timeline rail.
+ */
+.page {
+  padding-block: var(--space-8) var(--space-9);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.title {
+  font-size: clamp(2.75rem, 5.6vw, 4.75rem);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+  max-width: 20ch;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/** Sub-block inside a STAR section, so the four acts stay readable as acts. */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.heading {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+}
+
+.subheading {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-accent);
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 72ch;
+}
+
+.prose p {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ----------------------------------------------------------------- Goals */
+.goals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.goal {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.goalNumber {
+  flex-shrink: 0;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  color: var(--color-accent);
+}
+
+.goalText {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+}
+
+/* ------------------------------------------------------------ Pain points */
+.painList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.painItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.painTitle {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent);
+}
+
+.painText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------- Callout */
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.calloutMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+.calloutTitle {
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.calloutText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------------------------------- Turn / win notes */
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-left: 3px solid var(--color-border-strong);
+  border-radius: var(--radius-xl);
+}
+
+/** The payoff of the case — the one note that earns the accent. */
+.noteWin {
+  background: var(--color-accent-soft);
+  border-left-color: var(--color-accent);
+}
+
+.noteLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.noteWin .noteLabel {
+  color: var(--color-accent);
+}
+
+.noteText {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+}
+
+/* ----------------------------------------------------------------- Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.statValue {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.statLabel {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ---------------------------------------------------------- Token layers */
+.tokenGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.tokenCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+/** The semantic layer is the one the AI actually reads — flag it. */
+.tokenSemantic {
+  background: var(--color-accent-soft);
+  border-color: var(--color-border-strong);
+}
+
+.tokenLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+.tokenName {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.tokenSemantic .tokenName {
+  color: var(--color-accent);
+}
+
+.tokenText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.pill {
+  padding: var(--space-2) var(--space-4);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: var(--fs-xs);
+  color: var(--color-text-muted);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+}
+
+/* ----------------------------------------------------------------- Steps */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.step {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.stepNumber {
+  flex-shrink: 0;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-accent);
+}
+
+.stepBody {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stepTitle {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+}
+
+.stepText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------------------------------------- Check list */
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.checkList li {
+  position: relative;
+  padding-left: var(--space-5);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+.checkList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-pill);
+}
+
+/* -------------------------------------------------------------- Timeline */
+/*
+ * The spine of the case: it carries the six-month arc, including the month
+ * that failed. Given its own surface and a per-item scroll reveal so it reads
+ * as a chapter rather than a list.
+ */
+.timelineSection {
+  gap: var(--space-7);
+  padding: var(--space-8) var(--space-7);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 0 0 var(--space-7) var(--space-7);
+  border-left: 2px solid var(--color-border);
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 600ms var(--ease-out),
+    transform 600ms var(--ease-out);
+}
+
+.timelineVisible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timelineItem:last-child {
+  padding-bottom: 0;
+  border-left-color: transparent;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: -0.5rem;
+  top: 0.35em;
+  width: 0.875rem;
+  height: 0.875rem;
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+/** Hollow dot: the milestone that did not go to plan. */
+.timelineWarn::before {
+  background: var(--color-bg-elevated);
+  border: 3px solid var(--color-accent);
+}
+
+/** The pivot that unlocked the result — haloed so it reads as the turning point. */
+.timelineKey::before {
+  background: var(--gradient-accent);
+  box-shadow: 0 0 0 0.375rem var(--color-accent-soft);
+}
+
+.timelinePhase {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+.timelineText {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timelineItem {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ----------------------------------------------------------------- Tools */
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.tool {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-7) var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  transition:
+    border-color var(--transition-base),
+    background var(--transition-base);
+}
+
+.tool:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-border-strong);
+}
+
+/* The marks ship as black monochrome paths, so invert them to read on dark. */
+.toolLogo {
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity var(--transition-base);
+  user-select: none;
+}
+
+.tool:hover .toolLogo {
+  opacity: 1;
+}
+
+.toolName {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .painList,
+  .tokenGrid,
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .tools {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .timelineSection {
+    padding: var(--space-6) var(--space-5);
+  }
+}

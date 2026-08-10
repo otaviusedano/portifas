@@ -1,0 +1,16 @@
+node_modules
+dist
+dist-ssr
+*.local
+.git
+.gitignore
+.vscode
+.idea
+.DS_Store
+npm-debug.log*
+*.log
+*.tsbuildinfo
+etapa-*.png
+fisttap.png
+README.md
+TASKS.md

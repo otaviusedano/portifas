@@ -1,0 +1,228 @@
+.page {
+  padding-block: var(--space-8) var(--space-9);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.title {
+  font-size: clamp(2.75rem, 5.6vw, 4.75rem);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+  max-width: 20ch;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.heading {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+}
+
+.subheading {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-accent);
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 72ch;
+}
+
+.prose p {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------------------------------------------ Goals */
+.goals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  counter-reset: goal;
+}
+
+.goal {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.goalNumber {
+  flex-shrink: 0;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  color: var(--color-accent);
+}
+
+.goalText {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+}
+
+/* ------------------------------------------------------------- Pain points */
+.painList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.painItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.painTitle {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent);
+}
+
+.painText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ---------------------------------------------------------------- Callout */
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.calloutMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+.calloutTitle {
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.calloutText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ---------------------------------------------------- Goal comparison grid */
+.columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.panelTitle {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.checkList li {
+  position: relative;
+  padding-left: var(--space-5);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+.checkList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-pill);
+}
+
+/* ------------------------------------------------------------ Media grid */
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .painList,
+  .columns {
+    grid-template-columns: 1fr;
+  }
+
+  .mediaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

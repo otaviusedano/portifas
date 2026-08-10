@@ -1,0 +1,52 @@
+.section {
+  padding-block: var(--space-9);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.hint {
+  flex-shrink: 0;
+  font-size: var(--fs-sm);
+  color: var(--color-text-muted);
+  transition: color var(--transition-base);
+}
+
+.hint:hover {
+  color: var(--color-accent);
+}
+
+.track {
+  display: flex;
+  gap: var(--space-5);
+  overflow-x: auto;
+  cursor: grab;
+  scrollbar-width: none;
+  padding-block: var(--space-2);
+  overscroll-behavior-x: contain;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Always fit exactly two cards in view (gap = --space-5, half = --space-3) */
+.track > * {
+  flex: 0 0 calc(50% - var(--space-3));
+}
+
+@media (max-width: 768px) {
+  .track > * {
+    flex-basis: 85%;
+  }
+}

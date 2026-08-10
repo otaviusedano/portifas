@@ -1,0 +1,246 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  overflow: hidden;
+  isolation: isolate;
+  font-family: var(--font-sans);
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: var(--radius-md);
+  transition:
+    transform var(--transition-fast),
+    background-color var(--transition-base),
+    box-shadow var(--transition-base),
+    color var(--transition-base);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.label {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* -------------------------------------------------------- Aurora on hover */
+.aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Separate stage so the growth can ease independently of the drift loop */
+.auroraStage {
+  position: absolute;
+  inset: 0;
+  transform: scale(1);
+  transform-origin: 50% 100%;
+  transition: transform 1400ms var(--ease-out);
+}
+
+.button:hover .auroraStage {
+  transform: scale(2.6);
+}
+
+.auroraLayer1,
+.auroraLayer2,
+.auroraLayer3 {
+  position: absolute;
+  left: 50%;
+  bottom: -70%;
+  width: 62%;
+  height: 150%;
+  border-radius: 50%;
+  filter: blur(10px);
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+
+.auroraLayer1 {
+  background: radial-gradient(
+    closest-side,
+    var(--color-accent-hi),
+    transparent 70%
+  );
+  animation: btnAurora1 7s ease-in-out infinite;
+}
+
+.auroraLayer2 {
+  background: radial-gradient(
+    closest-side,
+    var(--color-accent-teal),
+    transparent 70%
+  );
+  animation: btnAurora2 9s ease-in-out infinite;
+  animation-delay: -3s;
+}
+
+.auroraLayer3 {
+  background: radial-gradient(
+    closest-side,
+    var(--color-accent),
+    transparent 70%
+  );
+  animation: btnAurora3 8s ease-in-out infinite;
+  animation-delay: -5s;
+}
+
+/* Screen blending is invisible over the bright accent fill — overlay keeps
+   the drift readable on the primary variant */
+.primary .auroraLayer1,
+.primary .auroraLayer2,
+.primary .auroraLayer3 {
+  mix-blend-mode: multiply;
+  filter: blur(14px);
+}
+
+.primary .auroraLayer1 {
+  background: radial-gradient(closest-side, #14b88c, transparent 70%);
+}
+
+.primary .auroraLayer2 {
+  background: radial-gradient(closest-side, #0e7f96, transparent 70%);
+}
+
+.primary .auroraLayer3 {
+  background: radial-gradient(closest-side, #1fb6c9, transparent 70%);
+}
+
+/* Hovering slows the drift down while the glow spreads out */
+.button:hover .auroraLayer1 {
+  animation-duration: 16s;
+}
+
+.button:hover .auroraLayer2 {
+  animation-duration: 20s;
+}
+
+.button:hover .auroraLayer3 {
+  animation-duration: 18s;
+}
+
+@keyframes btnAurora1 {
+  0% {
+    transform: translate(-78%, 4%) scale(0.9);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translate(-34%, -6%) scale(1.15);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(-78%, 4%) scale(0.9);
+    opacity: 0.35;
+  }
+}
+
+@keyframes btnAurora2 {
+  0% {
+    transform: translate(-30%, 2%) scale(1.1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(-70%, -8%) scale(0.88);
+    opacity: 0.55;
+  }
+  100% {
+    transform: translate(-30%, 2%) scale(1.1);
+    opacity: 0.3;
+  }
+}
+
+@keyframes btnAurora3 {
+  0% {
+    transform: translate(-52%, -4%) scale(1);
+    opacity: 0.28;
+  }
+  50% {
+    transform: translate(-58%, 6%) scale(1.2);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-52%, -4%) scale(1);
+    opacity: 0.28;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .auroraStage,
+  .button:hover .auroraStage {
+    transform: scale(1);
+  }
+
+  .auroraLayer1,
+  .auroraLayer2,
+  .auroraLayer3 {
+    animation: none;
+    opacity: 0.32;
+  }
+}
+
+/* ------------------------------------------------------------------- Sizes */
+.sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--fs-sm);
+}
+
+.md {
+  padding: var(--space-3) var(--space-5);
+  font-size: var(--fs-base);
+}
+
+/* ---------------------------------------------------------------- Variants */
+.primary {
+  color: var(--color-bg);
+  background: var(--gradient-accent);
+}
+
+.primary:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+/* Gradient border with dark fill — the "Contact me" look */
+.outline-gradient {
+  color: var(--color-text);
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--color-bg-elevated), var(--color-bg-elevated))
+      padding-box,
+    var(--gradient-accent) border-box;
+}
+
+.outline-gradient:hover {
+  box-shadow: var(--shadow-glow);
+}
+
+.ghost {
+  color: var(--color-text-muted);
+  background: transparent;
+}
+
+.ghost:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.solid {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-strong);
+}
+
+.solid:hover {
+  background: var(--color-surface-hover);
+  border-color: var(--color-accent);
+}

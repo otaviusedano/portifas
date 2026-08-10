@@ -1,0 +1,23 @@
+import HeroSection from '@/components/organisms/HeroSection/HeroSection'
+import { useLanguage } from '@/i18n/LanguageContext'
+import ClientsStrip from '@/components/organisms/ClientsStrip/ClientsStrip'
+import ProjectsSection from '@/components/organisms/ProjectsSection/ProjectsSection'
+import AboutSection from '@/components/organisms/AboutSection/AboutSection'
+import TestimonialsSection from '@/components/organisms/TestimonialsSection/TestimonialsSection'
+
+const FeaturedProjects = () => {
+  const { t } = useLanguage()
+  return <ProjectsSection limit={4} title={t.projects.featured} />
+}
+
+const HomePage = () => (
+  <>
+    <HeroSection />
+    <ClientsStrip />
+    <FeaturedProjects />
+    <AboutSection />
+    <TestimonialsSection />
+  </>
+)
+
+export default HomePage

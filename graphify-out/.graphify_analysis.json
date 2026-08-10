@@ -1,0 +1,437 @@
+{
+  "communities": {
+    "0": [
+      "eslint",
+      "eslint_js",
+      "eslint_plugin_react_hooks",
+      "eslint_plugin_react_refresh",
+      "globals",
+      "package_devdependencies",
+      "package_devdependencies_eslint",
+      "package_devdependencies_eslint_js",
+      "package_devdependencies_eslint_plugin_react_hooks",
+      "package_devdependencies_eslint_plugin_react_refresh",
+      "package_devdependencies_globals",
+      "package_devdependencies_prettier",
+      "package_devdependencies_types_node",
+      "package_devdependencies_types_react",
+      "package_devdependencies_types_react_dom",
+      "package_devdependencies_typescript",
+      "package_devdependencies_typescript_eslint",
+      "package_devdependencies_vite",
+      "package_devdependencies_vitejs_plugin_react",
+      "prettier",
+      "types_node",
+      "types_react",
+      "types_react_dom",
+      "typescript",
+      "typescript_eslint",
+      "vite",
+      "vitejs_plugin_react"
+    ],
+    "1": [
+      "ref_dom",
+      "ref_dom_iterable",
+      "ref_es2020",
+      "ref_src",
+      "tsconfig_app",
+      "tsconfig_app_compileroptions",
+      "tsconfig_app_compileroptions_allowimportingtsextensions",
+      "tsconfig_app_compileroptions_baseurl",
+      "tsconfig_app_compileroptions_isolatedmodules",
+      "tsconfig_app_compileroptions_jsx",
+      "tsconfig_app_compileroptions_lib",
+      "tsconfig_app_compileroptions_module",
+      "tsconfig_app_compileroptions_moduledetection",
+      "tsconfig_app_compileroptions_moduleresolution",
+      "tsconfig_app_compileroptions_noemit",
+      "tsconfig_app_compileroptions_nofallthroughcasesinswitch",
+      "tsconfig_app_compileroptions_nouncheckedsideeffectimports",
+      "tsconfig_app_compileroptions_nounusedlocals",
+      "tsconfig_app_compileroptions_nounusedparameters",
+      "tsconfig_app_compileroptions_paths",
+      "tsconfig_app_compileroptions_skiplibcheck",
+      "tsconfig_app_compileroptions_strict",
+      "tsconfig_app_compileroptions_target",
+      "tsconfig_app_compileroptions_usedefineforclassfields",
+      "tsconfig_app_include"
+    ],
+    "2": [
+      "ref_es2023",
+      "ref_vite_config_ts",
+      "tsconfig_node",
+      "tsconfig_node_compileroptions",
+      "tsconfig_node_compileroptions_allowimportingtsextensions",
+      "tsconfig_node_compileroptions_isolatedmodules",
+      "tsconfig_node_compileroptions_lib",
+      "tsconfig_node_compileroptions_module",
+      "tsconfig_node_compileroptions_moduledetection",
+      "tsconfig_node_compileroptions_moduleresolution",
+      "tsconfig_node_compileroptions_noemit",
+      "tsconfig_node_compileroptions_nofallthroughcasesinswitch",
+      "tsconfig_node_compileroptions_nouncheckedsideeffectimports",
+      "tsconfig_node_compileroptions_nounusedlocals",
+      "tsconfig_node_compileroptions_nounusedparameters",
+      "tsconfig_node_compileroptions_skiplibcheck",
+      "tsconfig_node_compileroptions_strict",
+      "tsconfig_node_compileroptions_target",
+      "tsconfig_node_include"
+    ],
+    "3": [
+      "fontsource_space_grotesk",
+      "headroom_ai",
+      "package_dependencies",
+      "package_dependencies_fontsource_space_grotesk",
+      "package_dependencies_headroom_ai",
+      "package_dependencies_react",
+      "package_dependencies_react_dom",
+      "package_dependencies_react_router_dom",
+      "react",
+      "react_dom",
+      "react_router_dom"
+    ],
+    "4": [
+      "package",
+      "package_name",
+      "package_private",
+      "package_scripts",
+      "package_scripts_build",
+      "package_scripts_dev",
+      "package_scripts_format",
+      "package_scripts_lint",
+      "package_scripts_preview",
+      "package_type",
+      "package_version"
+    ],
+    "5": [
+      "src_components_atoms_button_button",
+      "src_components_atoms_button_button_baseprops",
+      "src_components_atoms_button_button_button",
+      "src_components_atoms_button_button_buttonasanchor",
+      "src_components_atoms_button_button_buttonasbutton",
+      "src_components_atoms_button_button_buttonaslink",
+      "src_components_atoms_button_button_buttonprops",
+      "src_components_atoms_button_button_buttonsize",
+      "src_components_atoms_button_button_buttonvariant"
+    ],
+    "6": [
+      "src_types_index",
+      "src_types_index_client",
+      "src_types_index_profile",
+      "src_types_index_project",
+      "src_types_index_social",
+      "src_types_index_stat",
+      "src_types_index_testimonial"
+    ],
+    "7": [
+      "src_utils_routes",
+      "src_utils_routes_about_section_id",
+      "src_utils_routes_contact_route",
+      "src_utils_routes_nav_items",
+      "src_utils_routes_navitem"
+    ],
+    "8": [
+      "docker_image",
+      "docker_image_build",
+      "docker_image_export_image",
+      "docker_image_sh__entry"
+    ],
+    "9": [
+      "src_components_organisms_footer_footer",
+      "src_components_organisms_footer_footer_footer",
+      "src_components_organisms_footer_footer_linkedinicon",
+      "src_components_organisms_footer_footer_whatsappicon"
+    ],
+    "10": [
+      "src_components_organisms_herosection_herobackground",
+      "src_components_organisms_herosection_herobackground_herobackground",
+      "src_components_organisms_herosection_herosection",
+      "src_components_organisms_herosection_herosection_herosection"
+    ],
+    "11": [
+      "src_styles_tokens",
+      "src_styles_tokens_accentcolors",
+      "src_styles_tokens_breakpoint",
+      "src_styles_tokens_breakpoints"
+    ],
+    "12": [
+      "src_app",
+      "src_app_app",
+      "src_main"
+    ],
+    "13": [
+      "src_components_atoms_avatar_avatar",
+      "src_components_atoms_avatar_avatar_avatar",
+      "src_components_atoms_avatar_avatar_avatarprops"
+    ],
+    "14": [
+      "src_components_atoms_container_container",
+      "src_components_atoms_container_container_container",
+      "src_components_atoms_container_container_containerprops"
+    ],
+    "15": [
+      "src_components_atoms_reveal_reveal",
+      "src_components_atoms_reveal_reveal_reveal",
+      "src_components_atoms_reveal_reveal_revealprops"
+    ],
+    "16": [
+      "src_components_atoms_tag_tag",
+      "src_components_atoms_tag_tag_tag",
+      "src_components_atoms_tag_tag_tagprops"
+    ],
+    "17": [
+      "src_components_molecules_clientlogo_clientlogo",
+      "src_components_molecules_clientlogo_clientlogo_clientlogo",
+      "src_components_molecules_clientlogo_clientlogo_clientlogoprops"
+    ],
+    "18": [
+      "src_components_molecules_navbar_navbar",
+      "src_components_molecules_navbar_navbar_navbar",
+      "src_components_molecules_navbar_navbar_navbarprops"
+    ],
+    "19": [
+      "src_components_molecules_projectcard_projectcard",
+      "src_components_molecules_projectcard_projectcard_projectcard",
+      "src_components_molecules_projectcard_projectcard_projectcardprops"
+    ],
+    "20": [
+      "src_components_molecules_sectionheading_sectionheading",
+      "src_components_molecules_sectionheading_sectionheading_sectionheading",
+      "src_components_molecules_sectionheading_sectionheading_sectionheadingprops"
+    ],
+    "21": [
+      "src_components_molecules_testimonialcard_testimonialcard",
+      "src_components_molecules_testimonialcard_testimonialcard_testimonialcard",
+      "src_components_molecules_testimonialcard_testimonialcard_testimonialcardprops"
+    ],
+    "22": [
+      "src_components_organisms_projectssection_projectssection",
+      "src_components_organisms_projectssection_projectssection_projectssection",
+      "src_components_organisms_projectssection_projectssection_projectssectionprops"
+    ],
+    "23": [
+      "src_hooks_usereveal",
+      "src_hooks_usereveal_usereveal",
+      "src_hooks_usereveal_userevealreturn"
+    ],
+    "24": [
+      "tsconfig",
+      "tsconfig_files",
+      "tsconfig_references"
+    ],
+    "25": [
+      "src_components_atoms_logo_logo",
+      "src_components_atoms_logo_logo_logo"
+    ],
+    "26": [
+      "src_components_organisms_aboutsection_aboutsection",
+      "src_components_organisms_aboutsection_aboutsection_aboutsection"
+    ],
+    "27": [
+      "src_components_organisms_clientsstrip_clientsstrip",
+      "src_components_organisms_clientsstrip_clientsstrip_clientsstrip"
+    ],
+    "28": [
+      "src_components_organisms_contactsection_contactsection",
+      "src_components_organisms_contactsection_contactsection_contactsection"
+    ],
+    "29": [
+      "src_components_organisms_header_header",
+      "src_components_organisms_header_header_header"
+    ],
+    "30": [
+      "src_components_organisms_rootlayout_rootlayout",
+      "src_components_organisms_rootlayout_rootlayout_rootlayout"
+    ],
+    "31": [
+      "src_components_organisms_testimonialssection_testimonialssection",
+      "src_components_organisms_testimonialssection_testimonialssection_testimonialssection"
+    ],
+    "32": [
+      "src_data_clientlogos",
+      "src_data_clientlogos_clientlogos"
+    ],
+    "33": [
+      "src_data_clients",
+      "src_data_clients_clients"
+    ],
+    "34": [
+      "src_data_profile",
+      "src_data_profile_profile"
+    ],
+    "35": [
+      "src_data_projects",
+      "src_data_projects_projects"
+    ],
+    "36": [
+      "src_data_testimonials",
+      "src_data_testimonials_testimonials"
+    ],
+    "37": [
+      "src_hooks_usedragscroll",
+      "src_hooks_usedragscroll_usedragscroll"
+    ],
+    "38": [
+      "src_pages_contactpage",
+      "src_pages_contactpage_contactpage"
+    ],
+    "39": [
+      "src_pages_homepage",
+      "src_pages_homepage_homepage"
+    ],
+    "40": [
+      "src_pages_notfoundpage",
+      "src_pages_notfoundpage_notfoundpage"
+    ],
+    "41": [
+      "src_pages_projectspage",
+      "src_pages_projectspage_projectspage"
+    ],
+    "42": [
+      "src_utils_getinitials",
+      "src_utils_getinitials_getinitials"
+    ],
+    "43": [
+      "eslint_config"
+    ],
+    "44": [
+      "src_vite_env_d"
+    ],
+    "45": [
+      "vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07407407407407407,
+    "1": 0.08,
+    "2": 0.10526315789473684,
+    "3": 0.18181818181818182,
+    "4": 0.18181818181818182,
+    "5": 0.3055555555555556,
+    "6": 0.2857142857142857,
+    "7": 0.4,
+    "8": 0.8333333333333334,
+    "9": 0.5,
+    "10": 0.6666666666666666,
+    "11": 0.5,
+    "12": 1.0,
+    "13": 0.6666666666666666,
+    "14": 0.6666666666666666,
+    "15": 0.6666666666666666,
+    "16": 0.6666666666666666,
+    "17": 0.6666666666666666,
+    "18": 0.6666666666666666,
+    "19": 0.6666666666666666,
+    "20": 0.6666666666666666,
+    "21": 0.6666666666666666,
+    "22": 0.6666666666666666,
+    "23": 0.6666666666666666,
+    "24": 0.6666666666666666,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+    "30": 1.0,
+    "31": 1.0,
+    "32": 1.0,
+    "33": 1.0,
+    "34": 1.0,
+    "35": 1.0,
+    "36": 1.0,
+    "37": 1.0,
+    "38": 1.0,
+    "39": 1.0,
+    "40": 1.0,
+    "41": 1.0,
+    "42": 1.0,
+    "43": 1.0,
+    "44": 1.0,
+    "45": 1.0
+  },
+  "gods": [
+    {
+      "id": "tsconfig_app_compileroptions",
+      "label": "compilerOptions",
+      "degree": 19
+    },
+    {
+      "id": "tsconfig_node_compileroptions",
+      "label": "compilerOptions",
+      "degree": 15
+    },
+    {
+      "id": "package_scripts",
+      "label": "scripts",
+      "degree": 6
+    },
+    {
+      "id": "src_components_atoms_button_button_baseprops",
+      "label": "BaseProps",
+      "degree": 4
+    },
+    {
+      "id": "tsconfig_app_compileroptions_lib",
+      "label": "lib",
+      "degree": 4
+    },
+    {
+      "id": "docker_image_sh__entry",
+      "label": "docker-image.sh script",
+      "degree": 3
+    },
+    {
+      "id": "docker_image_build",
+      "label": "build()",
+      "degree": 2
+    },
+    {
+      "id": "docker_image_export_image",
+      "label": "export_image()",
+      "degree": 2
+    },
+    {
+      "id": "package_dependencies_fontsource_space_grotesk",
+      "label": "@fontsource/space-grotesk",
+      "degree": 2
+    },
+    {
+      "id": "package_dependencies_headroom_ai",
+      "label": "headroom-ai",
+      "degree": 2
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `devDependencies` connect `Community 0` to `Community 4`?",
+      "why": "High betweenness centrality (0.041) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `dependencies` connect `Community 3` to `Community 4`?",
+      "why": "High betweenness centrality (0.020) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `name`, `private`, `version` to the rest of the system?",
+      "why": "97 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 0` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 1` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.08 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Community 2` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10526315789473684 - nodes in this community are weakly interconnected."
+    }
+  ]
+}

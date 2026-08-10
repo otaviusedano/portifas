@@ -1,0 +1,13 @@
+.logo {
+  font-family: var(--font-sans);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  font-style: italic;
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-accent);
+  transition: color var(--transition-base);
+}
+
+.logo:hover {
+  color: var(--color-accent-hi);
+}

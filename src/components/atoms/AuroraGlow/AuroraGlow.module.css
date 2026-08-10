@@ -1,0 +1,129 @@
+.aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.layer1,
+.layer2,
+.layer3 {
+  position: absolute;
+  left: 50%;
+  bottom: -35%;
+  width: 130%;
+  height: 75%;
+  border-radius: 50%;
+  filter: blur(48px);
+  mix-blend-mode: screen;
+  will-change: transform, opacity;
+}
+
+.layer1 {
+  background: radial-gradient(
+    closest-side,
+    var(--color-accent-hi),
+    transparent 70%
+  );
+  animation: auroraDrift1 18s ease-in-out infinite;
+}
+
+.layer2 {
+  background: radial-gradient(
+    closest-side,
+    var(--color-accent-teal),
+    transparent 70%
+  );
+  animation: auroraDrift2 24s ease-in-out infinite;
+  animation-delay: -6s;
+}
+
+.layer3 {
+  background: radial-gradient(
+    closest-side,
+    var(--color-accent),
+    transparent 70%
+  );
+  animation: auroraDrift3 21s ease-in-out infinite;
+  animation-delay: -12s;
+}
+
+/* Gentle drift with a subtle brightness/scale swing — noticeable up close,
+   never grabs attention from the content in front of it. */
+@keyframes auroraDrift1 {
+  0% {
+    transform: translate(-60%, 10%) scale(0.97);
+    opacity: 0.14;
+  }
+  30% {
+    transform: translate(-45%, -6%) scale(1.04);
+    opacity: 0.22;
+  }
+  55% {
+    transform: translate(-55%, 8%) scale(0.99);
+    opacity: 0.17;
+  }
+  80% {
+    transform: translate(-40%, -4%) scale(1.05);
+    opacity: 0.26;
+  }
+  100% {
+    transform: translate(-60%, 10%) scale(0.97);
+    opacity: 0.14;
+  }
+}
+
+@keyframes auroraDrift2 {
+  0% {
+    transform: translate(-50%, 6%) scale(1);
+    opacity: 0.1;
+  }
+  35% {
+    transform: translate(-38%, -8%) scale(0.96);
+    opacity: 0.2;
+  }
+  60% {
+    transform: translate(-58%, 4%) scale(1.05);
+    opacity: 0.25;
+  }
+  85% {
+    transform: translate(-45%, -6%) scale(0.98);
+    opacity: 0.13;
+  }
+  100% {
+    transform: translate(-50%, 6%) scale(1);
+    opacity: 0.1;
+  }
+}
+
+@keyframes auroraDrift3 {
+  0% {
+    transform: translate(-42%, 4%) scale(1.02);
+    opacity: 0.12;
+  }
+  40% {
+    transform: translate(-60%, -6%) scale(0.97);
+    opacity: 0.24;
+  }
+  65% {
+    transform: translate(-48%, 8%) scale(1.05);
+    opacity: 0.15;
+  }
+  90% {
+    transform: translate(-55%, -4%) scale(1);
+    opacity: 0.21;
+  }
+  100% {
+    transform: translate(-42%, 4%) scale(1.02);
+    opacity: 0.12;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .layer1,
+  .layer2,
+  .layer3 {
+    animation: none;
+    opacity: 0.16;
+  }
+}
