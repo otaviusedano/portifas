@@ -1,0 +1,523 @@
+/*
+ * Mirrors CaseFpassPage.module.css so every case study reads as one family.
+ * Additions here cover what this story needs and Fpass doesn't: the tagline,
+ * the glossary callout, the interview stats/script and the decision cards
+ * that stand in for the validation table.
+ */
+.page {
+  padding-block: var(--space-8) var(--space-9);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-9);
+}
+
+/* Same frame as the Fpass hero, so both case studies open identically. */
+.heroImage {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  border: 1px solid var(--color-text);
+  border-radius: var(--radius-xl);
+}
+
+.heroImage img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/*
+ * Shared frame for the case artwork. Each modifier below carries the ratio of
+ * the image it holds, so every one fills edge to edge instead of letterboxing
+ * against the frame colour.
+ */
+.mediaFrame {
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.mediaFrame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+ * The Fulltrader ecosystem board, at its own 7/5 ratio and scaled from the
+ * centre — the artwork ships with white margins all round, so the zoom trims
+ * them while bringing the centred logo forward.
+ */
+.frameBoard {
+  aspect-ratio: 7 / 5;
+}
+
+.frameBoard img {
+  transform: scale(1.15);
+}
+
+/* The Matchbook capture is a wide screenshot — framed to its exact 1920x918. */
+.frameWide {
+  aspect-ratio: 1920 / 918;
+}
+
+/* Full product screens, framed at their native 1440x1024 so none is cropped. */
+.frameScreen {
+  aspect-ratio: 45 / 32;
+}
+
+/*
+ * The logo banner sits at its own scale instead of being blown up to fill the
+ * frame, so the surround is painted the artwork's own background and the
+ * contained edges disappear into it.
+ */
+.frameLogo {
+  aspect-ratio: 16 / 6;
+  background: #f5f5f7;
+}
+
+.frameLogo img {
+  object-fit: contain;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.title {
+  font-size: clamp(2.75rem, 5.6vw, 4.75rem);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+  max-width: 20ch;
+}
+
+.subtitle {
+  font-size: var(--fs-xl);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+/** Sub-block inside a section, e.g. one benchmark item or feature card. */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.blockTitle {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-text);
+}
+
+.heading {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+}
+
+.subheading {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-accent);
+}
+
+.prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 72ch;
+}
+
+.prose p {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+.highlight {
+  font-weight: var(--fw-medium);
+  color: var(--color-accent);
+}
+
+/* ------------------------------------------------------------------ Goals */
+.goals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.goal {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.goalNumber {
+  flex-shrink: 0;
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  color: var(--color-accent);
+}
+
+.goalTitle {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  line-height: var(--lh-heading);
+  color: var(--color-text);
+}
+
+.goalText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ------------------------------------------------------------- Pain points */
+.painList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.painItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.painTitle {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--color-accent);
+}
+
+.painText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ---------------------------------------------------------------- Callout */
+.callout {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.calloutMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-bold);
+  color: var(--color-bg);
+  background: var(--color-accent);
+  border-radius: var(--radius-pill);
+}
+
+.calloutTitle {
+  margin-bottom: var(--space-2);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+}
+
+.calloutText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------- Glossary */
+.glossaryList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3) var(--space-6);
+}
+
+.glossaryItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.glossaryTerm {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+}
+
+.glossaryText {
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ----------------------------------------------------------------- Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.statValue {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--tracking-tight);
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.statLabel {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/*
+ * A named deliverable standing in for a metric — keeps the gradient, drops to
+ * a title size so a full phrase doesn't render at count scale.
+ */
+.statName {
+  font-size: var(--fs-2xl);
+  letter-spacing: var(--tracking-tight);
+}
+
+/* Four scope cards, so they pair off instead of leaving an orphan row. */
+.scopeGrid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* -------------------------------------------------------------- Profiles */
+.profileGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.profileCard {
+  padding: var(--space-5);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.profileText {
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+/* ---------------------------------------------------------------- Script */
+.scriptColumn {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.scriptLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+/* ------------------------------------------------------------- Questions */
+.questionGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.questionCard {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.questionMark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--color-bg);
+  background: var(--gradient-accent);
+  border-radius: var(--radius-pill);
+}
+
+.questionText {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  color: var(--color-text);
+}
+
+/* ----------------------------------------------------------------- Table */
+/* Scrolls inside its own box so the page body never scrolls sideways. */
+.tableWrap {
+  overflow-x: auto;
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.table {
+  width: 100%;
+  min-width: 44rem;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table thead th {
+  padding: var(--space-4) var(--space-5);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table tbody tr + tr {
+  border-top: 1px solid var(--color-border);
+}
+
+.table tbody th,
+.table tbody td {
+  padding: var(--space-5);
+  vertical-align: top;
+  line-height: var(--lh-body);
+}
+
+.tableDecision {
+  width: 30%;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+}
+
+/** The measured finding — the reason the row exists, so it reads loudest. */
+.tableEvidence {
+  width: 30%;
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--color-accent);
+}
+
+.tableBusiness {
+  font-size: var(--fs-base);
+  color: var(--color-text-muted);
+}
+
+.metricsCard {
+  padding: var(--space-6);
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.checkList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.checkList li {
+  position: relative;
+  padding-left: var(--space-5);
+  font-size: var(--fs-base);
+  line-height: var(--lh-body);
+  color: var(--color-text-muted);
+}
+
+.checkList li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-pill);
+}
+
+@media (max-width: 768px) {
+  .painList,
+  .profileGrid,
+  .questionGrid,
+  .stats,
+  .scopeGrid,
+  .glossaryList {
+    grid-template-columns: 1fr;
+  }
+}

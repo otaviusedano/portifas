@@ -4,7 +4,7 @@ import imageProfile from '../assets/images/profile/profile.png'
 /** Role, headline, greeting, bio and stat labels live in `i18n/<lang>.ts`. */
 export const profile: ProfileBase = {
   name: 'Otávio Sedano',
-  statValues: ['+3', '+50', '+4100'],
+  statValues: ['+3', '+50', '+12'],
   email: 'sedanootavio@gmail.com',
   linkedin: 'https://linkedin.com/in/otaviosedano',
   whatsapp: 'https://wa.me/5519992439330',

@@ -21,6 +21,12 @@
   border-color: var(--color-border-strong);
 }
 
+.card > img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
 .thumb {
   display: flex;
   align-items: center;

@@ -5,9 +5,10 @@ import ProjectsSection from '@/components/organisms/ProjectsSection/ProjectsSect
 import AboutSection from '@/components/organisms/AboutSection/AboutSection'
 import TestimonialsSection from '@/components/organisms/TestimonialsSection/TestimonialsSection'
 
+/** Only the two leading cases are featured here; /projects lists them all. */
 const FeaturedProjects = () => {
   const { t } = useLanguage()
-  return <ProjectsSection limit={4} title={t.projects.featured} />
+  return <ProjectsSection limit={2} title={t.projects.featured} />
 }
 
 const HomePage = () => (

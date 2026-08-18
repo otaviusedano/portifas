@@ -107,15 +107,11 @@ export interface Dictionary {
     /** STAR act labels — each one opens the first section of its act. */
     star: { situation: string; task: string; action: string; result: string }
     context: { heading: string; paragraphs: string[]; media: string }
-    kickoff: { heading: string; paragraphs: string[] }
     goals: { heading: string; intro: string; items: string[] }
     pains: {
       heading: string
       intro: string
-      businessHeading: string
       business: PainPointCopy[]
-      userHeading: string
-      user: PainPointCopy[]
     }
     research: {
       heading: string
@@ -129,16 +125,82 @@ export interface Dictionary {
     goalsCompare: {
       heading: string
       intro: string
-      businessTitle: string
-      business: string[]
-      userTitle: string
-      user: string[]
     }
-    highFidelity: MediaBlockCopy
-    headerComponent: MediaBlockCopy
     profile: { title: string; text: string; media: string; blocks: string[] }
-    validation: { heading: string; paragraphs: string[] }
+    validation: { heading: string; paragraphs: string[]; metrics: string[] }
     finalDesign: MediaBlockCopy[]
+  }
+  /** Told with STAR: situation → task → action → result. */
+  caseBettest: {
+    title: string
+    role: string
+    tags: string[]
+    heroMedia: string
+    tagline: string
+    star: { situation: string; task: string; action: string; result: string }
+    context: {
+      heading: string
+      paragraphs: string[]
+      media: string
+      glossaryTitle: string
+      glossary: { term: string; text: string }[]
+    }
+    challenge: {
+      heading: string
+      subheading: string
+      intro: string
+      goals: PainPointCopy[]
+      business: string
+    }
+    myRole: { heading: string; text: string }
+    research: {
+      heading: string
+      subheading: string
+      intro: string
+      benchmark: MediaBlockCopy[]
+    }
+    interviews: {
+      heading: string
+      subheading: string
+      intro: string
+      stats: StatCopy[]
+      profilesHeading: string
+      profiles: string[]
+      profilesNote: string
+      scriptHeading: string
+      questionsLabel: string
+      questions: string[]
+      tasksLabel: string
+      tasks: string[]
+      methodNote: string
+    }
+    findings: {
+      heading: string
+      subheading: string
+      intro: string
+      pains: PainPointCopy[]
+      insightsHeading: string
+      insights: PainPointCopy[]
+      vocabNote: { title: string; text: string }
+    }
+    wireframes: { heading: string; paragraphs: string[] }
+    validation: {
+      heading: string
+      subheading: string
+      intro: string
+      decisionLabel: string
+      evidenceLabel: string
+      businessLabel: string
+      table: { decision: string; evidence: string; business: string }[]
+      metricsHeading: string
+      metrics: string[]
+    }
+    finalDesign: {
+      heading: string
+      features: MediaBlockCopy[]
+      scopeHeading: string
+      scope: StatCopy[]
+    }
   }
   /** Told with STAR: situation → task → action → result. */
   caseDesignSystem: {

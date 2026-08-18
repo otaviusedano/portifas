@@ -19,14 +19,13 @@ body {
   line-height: var(--lh-body);
 }
 
-/* Titles keep Space Grotesk and the 130% ratio */
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   line-height: var(--lh-heading);
 }
 

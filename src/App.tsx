@@ -5,6 +5,7 @@ import HomePage from '@/pages/HomePage'
 import ProjectsPage from '@/pages/ProjectsPage'
 import CaseFpassPage from '@/pages/CaseFpassPage'
 import CaseDesignSystemPage from '@/pages/CaseDesignSystemPage'
+import CaseBettestPage from '@/pages/CaseBettestPage'
 import ContactPage from '@/pages/ContactPage'
 import NotFoundPage from '@/pages/NotFoundPage'
 
@@ -15,7 +16,7 @@ const App = () => (
       <Route path="/projects" element={<ProjectsPage />} />
       <Route path="/projects/fpass" element={<CaseFpassPage />} />
       <Route path="/projects/design-system-ai" element={<CaseDesignSystemPage />} />
-      <Route path="/contact" element={<ContactPage />} />
+      <Route path="/projects/bettest" element={<CaseBettestPage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Route>
   </Routes>

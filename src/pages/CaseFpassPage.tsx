@@ -6,10 +6,8 @@ import StarLabel from '@/components/atoms/StarLabel/StarLabel'
 import { useLanguage } from '@/i18n/LanguageContext'
 import styles from './CaseFpassPage.module.css'
 
-import heroMockup from '@/assets/images/projectsCase/MockupFpass.svg'
-import profileMockup from '@/assets/images/projectsCase/Mockup fpass grande.svg'
+import heroMockup from '@/assets/images/projectsCase/fpass-principal-case.svg'
 import logoBanner from '@/assets/images/projectsCase/fpass-logo-banner.svg'
-import headerComponentMedia from '@/assets/images/projectsCase/fpass-header-component.png'
 import researchDuolingo from '@/assets/images/projectsCase/Duolingo.svg'
 import researchWow from '@/assets/images/projectsCase/research-wow.jpg'
 import avatarBenchmark from '@/assets/images/projectsCase/Avatar customization.svg'
@@ -42,6 +40,38 @@ const benchmarkMedia: { ratio: 'wide' | 'phone'; sources: string[] }[] = [
 
 const finalDesignMedia = [finalMarketplace, finalAchievements, finalLevelingUp, finalQuests]
 
+const HIGHLIGHT_TERMS = [
+  'Duolingo',
+  'World of Warcraft',
+  'elas criam ciclos de engajamento encadeados, onde cada ação do usuário gera uma recompensa que motiva a próxima',
+  'they create chained engagement loops, where each user action generates a reward that motivates the next one',
+  'conquistar, colecionar, progredir e retornar',
+  'earn, collect, progress and return',
+  'processo de revisão',
+  'review process',
+  'decisões de UX foram avaliadas quanto à consistência do sistema de design',
+  'UX decisions were evaluated for design system consistency',
+  'a entrega superou suas expectativas',
+  'the delivery exceeded their expectations',
+  'online learning platform',
+  'experience after the purchase was entirely passive',
+  'watched the first lessons and slowly disappeared',
+]
+const highlightRegex = new RegExp(`(${HIGHLIGHT_TERMS.join('|')})`, 'g')
+
+const highlightText = (text: string) =>
+  text
+    .split(highlightRegex)
+    .map((part, index) =>
+      HIGHLIGHT_TERMS.includes(part) ? (
+        <strong key={`${part}-${index}`} className={styles.highlight}>
+          {part}
+        </strong>
+      ) : (
+        part
+      ),
+    )
+
 const CaseFpassPage = () => {
   const { t } = useLanguage()
   const c = t.caseFpass
@@ -50,7 +80,9 @@ const CaseFpassPage = () => {
     <article className={styles.page}>
       <Container className={styles.inner}>
         <Reveal>
-          <MediaPlaceholder label={c.heroMedia} ratio="banner" src={heroMockup} />
+          <div className={styles.heroImage}>
+            <img src={heroMockup} alt={c.heroMedia} />
+          </div>
         </Reveal>
 
         <header className={styles.hero}>
@@ -77,7 +109,7 @@ const CaseFpassPage = () => {
           <h2 className={styles.heading}>{c.context.heading}</h2>
           <div className={styles.prose}>
             {c.context.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{highlightText(paragraph)}</p>
             ))}
           </div>
 
@@ -85,12 +117,19 @@ const CaseFpassPage = () => {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.heading}>{c.kickoff.heading}</h2>
+          <h2 className={styles.heading}>{c.pains.heading}</h2>
           <div className={styles.prose}>
-            {c.kickoff.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+            <p>{c.pains.intro}</p>
           </div>
+
+          <ul className={styles.painList}>
+            {c.pains.business.map((pain) => (
+              <li key={pain.title} className={styles.painItem}>
+                <strong className={styles.painTitle}>{pain.title}</strong>
+                <p className={styles.painText}>{pain.text}</p>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className={styles.section}>
@@ -111,38 +150,11 @@ const CaseFpassPage = () => {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.heading}>{c.pains.heading}</h2>
-          <div className={styles.prose}>
-            <p>{c.pains.intro}</p>
-          </div>
-
-          <h3 className={styles.subheading}>{c.pains.businessHeading}</h3>
-          <ul className={styles.painList}>
-            {c.pains.business.map((pain) => (
-              <li key={pain.title} className={styles.painItem}>
-                <strong className={styles.painTitle}>{pain.title}</strong>
-                <p className={styles.painText}>{pain.text}</p>
-              </li>
-            ))}
-          </ul>
-
-          <h3 className={styles.subheading}>{c.pains.userHeading}</h3>
-          <ul className={styles.painList}>
-            {c.pains.user.map((pain) => (
-              <li key={pain.title} className={styles.painItem}>
-                <strong className={styles.painTitle}>{pain.title}</strong>
-                <p className={styles.painText}>{pain.text}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        <section className={styles.section}>
           <StarLabel letter="A">{c.star.action}</StarLabel>
           <h2 className={styles.heading}>{c.research.heading}</h2>
           <h3 className={styles.subheading}>{c.research.subheading}</h3>
           <div className={styles.prose}>
-            <p>{c.research.text}</p>
+            <p>{highlightText(c.research.text)}</p>
           </div>
 
           <div className={styles.mediaGrid}>
@@ -185,65 +197,8 @@ const CaseFpassPage = () => {
         <section className={styles.section}>
           <h2 className={styles.heading}>{c.goalsCompare.heading}</h2>
           <div className={styles.prose}>
-            <p>{c.goalsCompare.intro}</p>
+            <p>{highlightText(c.goalsCompare.intro)}</p>
           </div>
-
-          <div className={styles.columns}>
-            <div className={styles.panel}>
-              <h3 className={styles.panelTitle}>
-                {c.goalsCompare.businessTitle}
-              </h3>
-              <ul className={styles.checkList}>
-                {c.goalsCompare.business.map((goal) => (
-                  <li key={goal}>{goal}</li>
-                ))}
-              </ul>
-            </div>
-
-            <div className={styles.panel}>
-              <h3 className={styles.panelTitle}>{c.goalsCompare.userTitle}</h3>
-              <ul className={styles.checkList}>
-                {c.goalsCompare.user.map((goal) => (
-                  <li key={goal}>{goal}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section className={styles.section}>
-          <h2 className={styles.heading}>{c.highFidelity.title}</h2>
-          <div className={styles.prose}>
-            <p>{c.highFidelity.text}</p>
-          </div>
-        </section>
-
-        <section className={styles.section}>
-          <h2 className={styles.heading}>{c.headerComponent.title}</h2>
-          <div className={styles.prose}>
-            <p>{c.headerComponent.text}</p>
-          </div>
-          <MediaPlaceholder
-            label={c.headerComponent.media}
-            ratio="wide"
-            src={headerComponentMedia}
-            fit="contain"
-          />
-        </section>
-
-        <section className={styles.section}>
-          <h2 className={styles.heading}>{c.profile.title}</h2>
-          <div className={styles.prose}>
-            <p>{c.profile.text}</p>
-          </div>
-
-          <ul className={styles.checkList}>
-            {c.profile.blocks.map((block) => (
-              <li key={block}>{block}</li>
-            ))}
-          </ul>
-
-          <MediaPlaceholder label={c.profile.media} ratio="wide" src={profileMockup} />
         </section>
 
         <section className={styles.section}>
@@ -251,8 +206,33 @@ const CaseFpassPage = () => {
           <h2 className={styles.heading}>{c.validation.heading}</h2>
           <div className={styles.prose}>
             {c.validation.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph}>{highlightText(paragraph)}</p>
             ))}
+          </div>
+
+          <div className={styles.metricsCard}>
+            <ul className={styles.checkList}>
+              {c.validation.metrics.map((metric) => (
+                <li key={metric}>{metric}</li>
+              ))}
+            </ul>
+          </div>
+
+          <h3 className={styles.heading}>{c.profile.title}</h3>
+          <div className={styles.prose}>
+            <p>{c.profile.text}</p>
+          </div>
+
+          <div className={styles.metricsCard}>
+            <ul className={styles.checkList}>
+              {c.profile.blocks.map((block) => (
+                <li key={block}>{block}</li>
+              ))}
+            </ul>
+          </div>
+
+          <div className={styles.profileImage}>
+            <img src={heroMockup} alt={c.profile.media} />
           </div>
         </section>
 

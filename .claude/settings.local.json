@@ -4,7 +4,10 @@
       "Bash(uv --version)",
       "Bash(npx tsc *)",
       "WebFetch(domain:www.figma.com)",
-      "Bash(timeout 30 bash -c 'until curl -sf http://localhost:5183 >/dev/null; do sleep 1; done')"
+      "Bash(timeout 30 bash -c 'until curl -sf http://localhost:5183 >/dev/null; do sleep 1; done')",
+      "mcp__claude_ai_Figma__get_metadata",
+      "mcp__claude_ai_Figma__get_screenshot",
+      "Bash(curl -sL -o /private/tmp/claude-501/-Users-otaviosedanosilva-Downloads-portifas-otavio-main/4a21ef0b-0cac-485b-bf66-7673fb5a8084/scratchpad/principal_case_preview.png \"https://www.figma.com/api/mcp/asset/35b23cf6-5e11-4947-8b10-98137c0ca1f3.png\")"
     ]
   }
 }
