@@ -6,7 +6,6 @@ import ProjectsPage from '@/pages/ProjectsPage'
 import CaseFpassPage from '@/pages/CaseFpassPage'
 import CaseDesignSystemPage from '@/pages/CaseDesignSystemPage'
 import CaseBettestPage from '@/pages/CaseBettestPage'
-import ContactPage from '@/pages/ContactPage'
 import NotFoundPage from '@/pages/NotFoundPage'
 
 const App = () => (
